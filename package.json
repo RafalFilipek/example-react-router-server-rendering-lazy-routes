@@ -4,17 +4,24 @@
   "description": "",
   "main": "client.js",
   "dependencies": {
+    "autoprefixer": "^6.2.3",
     "babel": "^5.8.34",
     "babel-core": "^5.8.34",
     "babel-loader": "^5.4.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "file-loader": "^0.8.5",
     "history": "^1.13.1",
+    "postcss-loader": "^0.8.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0",
-    "webpack": "^1.12.6"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.6",
+    "webpack-sources": "^0.1.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production webpack --progress && babel-node modules/server.js"
+    "start": "NODE_ENV=production webpack --progress && node __build__/server.js"
   },
   "author": "Ryan Florence",
   "license": "ISC"

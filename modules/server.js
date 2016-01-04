@@ -23,7 +23,12 @@ http.createServer((req, res) => {
   // serve JavaScript assets
   else if (/__build__/.test(req.url)) {
     fs.readFile(`.${req.url}`, (err, data) => {
-      write(data, 'text/javascript', res)
+      var ext = req.url.split('.').pop()
+      var contentTypeMap = {
+        'js': 'text/javascript',
+        'css': 'text/css'
+      }
+      write(data, contentTypeMap[ext] || '', res)
     })
   }
 

@@ -36,10 +36,11 @@ export function createPage(html) {
     <head>
       <meta charset="utf-8"/>
       <title>My Universal App</title>
+      <link rel="stylesheet" href="/__build__/style.css">
     </head>
     <body>
       <div id="app">${html}</div>
-      <script src="/__build__/main.js"></script>
+      <script src="/__build__/client.js"></script>
     </body>
   </html>
   `
